@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>code Editor</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Code Editor</h1>
+    </header>
+    <!-- main section -->
+    <section class="section">
+        <!-- for html code Editor -->
+        <div class="section_html">
+            <div class="upper">
+                <div class="heading">
+                <h3 class="heading_html">HTML</h3>
+                </div>
+                <div class="buttons">
+                    <button type="button" class="btn1" id="htxt" >copy</button>
+                    <button type="button" class="btn1" id="stxt" onclick="htmlsave()">Save</button>
+                    <button type="button" class="btn1" id="btnlock" onclick="lock()">Lock</button>
+                    <button type="button" class="btn1" onclick="unlock()">Unlock</button>
+                </div>
+            </div>
+            <div class="lower">
+                <textarea  class="htmlcode" onkeyup="run()"></textarea>
+            </div>
+        </div>
+        <!-- for css code Editor -->
+        <div class="section_css">
+                <div class="upper">
+                    <div class="heading">
+                    <h3 class="heading_html">CSS</h3>
+                    </div>
+                    <div class="buttons">
+                        <button type="button" class="btn1" id="csstxt" >copy</button>
+                        <button type="button" class="btn1" id="csssave" onclick="csssave()">Save</button>
+                        <button type="button" id="csslockbtn" class="btn1"onclick="csslock()">Lock</button>
+                        <button type="button" id="cssunlock" class="btn1" onclick="cssunlock()">Unlock</button>
+                    </div>
+                </div>
+                <div class="lower">
+                    <textarea class="csscode" onkeyup="run()"></textarea>
+                </div>
+        </div>
+
+        <!-- for javascript  code Editor-->
+        <div class="section_js">
+                <div class="upper">
+                    <div class="heading">
+                    <h3 class="heading_html">javascript</h3>
+                    </div>
+                    <div class="buttons">
+                        <button type="button" class="btn1" id="jstxt">copy</button>
+                        <button type="button" class="btn1" id="jssave" onclick="jssave()">Save</button>
+                        <button type="button" id="jslockbtn" class="btn1" onclick="jslock()">Lock</button>
+                        <button type="button" id="jsunlock" class="btn1" onclick="jsunlock()">Unlock</button>
+                    </div>
+                </div>
+                <div class="lower">
+                    <textarea class="jscode" onkeyup="run()"></textarea>
+                </div>
+        </div>
+    </section>
+    <!-- for output section footer -->
+    <footer class="footer">
+        <div class="footer_under">
+        <div class="footer_heading">
+            <h2>OUTPUT</h2>
+        </div>
+        <div class="footer_output">
+        <iframe class="output"></iframe>
+        </div>
+    </div>
+    </footer>
+    <!-- code for inserting a javascript -->
+
+    <script src="./script.js"></script>
+    
+</body>
+</html>
